@@ -52,11 +52,11 @@ function validateExpenseInput({ title, amount, category, date }) {
 // ---------- Core Operations ----------
 
 function getAllExpenses() {
-  return fileHandler.readJSON();
+  return fileHandler.readExpenses();
 }
 
-function filterByCategory(category) {
-  const expenses = fileHandler.readJSON();
+function getExpensesByCategory(category) {
+  const expenses = fileHandler.readExpenses();
   return expenses.filter(
     (expense) => expense.category.toLowerCase() === category.toLowerCase()
   );
@@ -68,7 +68,7 @@ function addExpense(input) {
     return { error: errors };
   }
 
-  const expenses = fileHandler.readJSON();
+  const expenses = fileHandler.readExpenses();
 
   const newExpense = {
     id: uuidv4(),
@@ -79,13 +79,13 @@ function addExpense(input) {
   };
 
   expenses.push(newExpense);
-  fileHandler.writeJSON(expenses);
+  fileHandler.writeExpenses(expenses);
 
   return { data: newExpense };
 }
 
 function deleteExpense(id) {
-  const expenses = fileHandler.readJSON();
+  const expenses = fileHandler.readExpenses();
   const index = expenses.findIndex((expense) => expense.id === id);
 
   if (index === -1) {
@@ -93,29 +93,27 @@ function deleteExpense(id) {
   }
 
   expenses.splice(index, 1);
-  fileHandler.writeJSON(expenses);
+  fileHandler.writeExpenses(expenses);
 
   return { success: true };
 }
 
-function getOverallTotal() {
-  const expenses = fileHandler.readJSON();
-  const total = expenses.reduce((sum, expense) => sum + expense.amount, 0);
-  return total;
+function calculateTotal() {
+  const expenses = fileHandler.readExpenses();
+  return expenses.reduce((sum, expense) => sum + expense.amount, 0);
 }
 
-function getCategoryTotal(category) {
-  const expenses = filterByCategory(category);
-  const total = expenses.reduce((sum, expense) => sum + expense.amount, 0);
-  return total;
+function calculateCategoryTotal(category) {
+  const expenses = getExpensesByCategory(category);
+  return expenses.reduce((sum, expense) => sum + expense.amount, 0);
 }
 
 module.exports = {
   validateExpenseInput,
   getAllExpenses,
-  filterByCategory,
+  getExpensesByCategory,
   addExpense,
   deleteExpense,
-  getOverallTotal,
-  getCategoryTotal,
+  calculateTotal,
+  calculateCategoryTotal,
 };

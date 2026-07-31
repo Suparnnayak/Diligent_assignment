@@ -11,17 +11,17 @@ const DATA_FILE = path.join(__dirname, "..", "data", "expenses.json");
  * No business logic, no validation.
  */
 
-function readJSON() {
+function readExpenses() {
   const raw = fs.readFileSync(DATA_FILE, "utf-8");
   if (!raw || raw.trim() === "") return [];
   return JSON.parse(raw);
 }
 
-function writeJSON(data) {
+function writeExpenses(data) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), "utf-8");
 }
 
 module.exports = {
-  readJSON,
-  writeJSON,
+  readExpenses,
+  writeExpenses,
 };

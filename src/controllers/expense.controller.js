@@ -27,7 +27,7 @@ function getExpenses(req, res) {
   const { category } = req.query;
 
   const expenses = category
-    ? expenseService.filterByCategory(category)
+    ? expenseService.getExpensesByCategory(category)
     : expenseService.getAllExpenses();
 
   return res.status(200).json(expenses);
@@ -37,11 +37,11 @@ function getSummary(req, res) {
   const { category } = req.query;
 
   if (category) {
-    const total = expenseService.getCategoryTotal(category);
+    const total = expenseService.calculateCategoryTotal(category);
     return res.status(200).json({ category, total });
   }
 
-  const total = expenseService.getOverallTotal();
+  const total = expenseService.calculateTotal();
   return res.status(200).json({ total });
 }
 
