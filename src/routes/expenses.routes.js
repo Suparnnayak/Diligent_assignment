@@ -1,5 +1,5 @@
 const express = require("express");
-const expenseController = require("../controllers/expenseController");
+const expenseController = require("../controllers/expense.controller");
 
 /**
  * Routes Layer

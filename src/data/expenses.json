@@ -1,0 +1,72 @@
+[
+  {
+    "id": "3cd22810-eb42-4f1e-b9e2-926be26f0f9a",
+    "title": "Coffee",
+    "amount": 120,
+    "category": "Food",
+    "date": "2026-07-31"
+  },
+  {
+    "id": "1fca5d33-16ed-4ba7-9c27-7fdcfb3771d7",
+    "title": "Coffee",
+    "amount": 120,
+    "category": "Food",
+    "date": "2026-07-31"
+  },
+  {
+    "id": "aa10dfce-4131-4f64-a57e-71bc372e2b81",
+    "title": "Bus Ticket",
+    "amount": 50,
+    "category": "Travel",
+    "date": "2026-07-30"
+  },
+  {
+    "id": "caec9646-526c-4fc4-80e5-a55c3b1d4476",
+    "title": "Coffee",
+    "amount": 120,
+    "category": "Food",
+    "date": "2026-07-31"
+  },
+  {
+    "id": "5c9477d7-5771-4b1e-acd9-7a2311a6dac7",
+    "title": "Bus Ticket",
+    "amount": 50,
+    "category": "Travel",
+    "date": "2026-07-30"
+  },
+  {
+    "id": "ca06cb25-6672-41a8-bba1-b2f68e55caf8",
+    "title": "Coffee",
+    "amount": 120,
+    "category": "Food",
+    "date": "2026-07-31"
+  },
+  {
+    "id": "f96bb43d-4ace-4efa-a10d-e0b6f99a7f69",
+    "title": "Bus Ticket",
+    "amount": 50,
+    "category": "Travel",
+    "date": "2026-07-30"
+  },
+  {
+    "id": "69d182f1-933c-4d65-9f9a-2f14269f3d9e",
+    "title": "Coffee",
+    "amount": 120,
+    "category": "Food",
+    "date": "2026-07-31"
+  },
+  {
+    "id": "7da3fecb-a831-44ac-82c7-0ac5d967dd83",
+    "title": "Groceries",
+    "amount": 860,
+    "category": "Food",
+    "date": "2026-07-29"
+  },
+  {
+    "id": "24d0de05-70f2-4b90-8a4a-07890c5fe295",
+    "title": "Bus Ticket",
+    "amount": 50,
+    "category": "Travel",
+    "date": "2026-07-30"
+  }
+]

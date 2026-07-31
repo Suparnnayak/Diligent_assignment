@@ -1,5 +1,5 @@
 const express = require("express");
-const expenseRoutes = require("./routes/expenseRoutes");
+const expenseRoutes = require("./routes/expenses.routes");
 const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
@@ -21,15 +21,5 @@ app.use((req, res) => {
 
 // Central error handler - catches unexpected errors, returns 500
 app.use(errorHandler);
-
-const PORT = process.env.PORT || 3000;
-
-// Only start listening when run directly (node app.js).
-// When required by tests (supertest), we just export the app.
-if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Expense Tracker API running on port ${PORT}`);
-  });
-}
 
 module.exports = app;
