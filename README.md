@@ -202,23 +202,25 @@ The attached Postman screenshots in the submission demonstrate these behaviors a
 
 ## API Screenshots
 
+### Swagger UI
+
+![Swagger UI](screenshots/image.png)
+
 ### Create Expense
 
-![Delete expense response](screenshots/Screenshot%202026-07-31%20234101.png)
+![Create expense response](screenshots/Screenshot%202026-07-31%20234302.png)
 
-### Summary Endpoint
+### Category Filter
 
 ![Category filter response](screenshots/Screenshot%202026-07-31%20234151.png)
 
+### Summary Endpoint
 
-### Category Filter
 ![Summary response](screenshots/Screenshot%202026-07-31%20234237.png)
-
 
 ### Delete Expense
 
-
-![Create expense response](screenshots/Screenshot%202026-07-31%20234302.png)
+![Delete expense response](screenshots/Screenshot%202026-07-31%20234101.png)
 
 ## Future Improvements
 
