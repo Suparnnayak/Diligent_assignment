@@ -58,6 +58,17 @@ describe("POST /expenses", () => {
     expect(res.body.errors.length).toBeGreaterThan(0);
   });
 
+  it("rejects a missing category with 400", async () => {
+    const res = await request(app).post("/expenses").send({
+      title: "Lunch",
+      amount: 150,
+      date: "2026-07-31",
+    });
+
+    expect(res.statusCode).toBe(400);
+    expect(res.body.errors).toContain("Category is required.");
+  });
+
   it("rejects an invalid date with 400", async () => {
     const res = await request(app).post("/expenses").send({
       title: "Movie",
@@ -189,6 +200,14 @@ describe("GET /expenses/summary?category=", () => {
     const res = await request(app).get("/expenses/summary?category=Food");
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual({ category: "Food", total: 980 });
+  });
+});
+
+describe("Invalid routes", () => {
+  it("returns 404 for an unknown route", async () => {
+    const res = await request(app).get("/does-not-exist");
+    expect(res.statusCode).toBe(404);
+    expect(res.body).toEqual({ message: "Route not found" });
   });
 });
 

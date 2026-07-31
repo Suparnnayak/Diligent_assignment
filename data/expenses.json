@@ -1,16 +1,1 @@
-[
-  {
-    "id": "d3e3e4bd-0c9e-4ad4-8843-5eb11f00a742",
-    "title": "DOSA",
-    "amount": 200,
-    "category": "Food",
-    "date": "2026-07-31"
-  },
-  {
-    "id": "62a6513d-f2df-4f5c-8b83-f0bcb293bd91",
-    "title": "PANT",
-    "amount": 2000,
-    "category": "DRESS",
-    "date": "2026-08-1"
-  }
-]
+[]
