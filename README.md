@@ -187,19 +187,21 @@ The attached Postman screenshots in the submission demonstrate these behaviors a
 
 ## API Screenshots
 
-### Delete Expense
+### Create Expense
 
 ![Delete expense response](screenshots/Screenshot%202026-07-31%20234101.png)
 
-### Category Filter
+### Summary Endpoint
 
 ![Category filter response](screenshots/Screenshot%202026-07-31%20234151.png)
 
-### Summary Endpoint
 
+### Category Filter
 ![Summary response](screenshots/Screenshot%202026-07-31%20234237.png)
 
-### Create Expense
+
+### Delete Expense
+
 
 ![Create expense response](screenshots/Screenshot%202026-07-31%20234302.png)
 
