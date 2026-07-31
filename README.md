@@ -13,6 +13,8 @@ This project follows a layered structure:
 
 The API is designed for local development and assessment workflows, with unit and integration coverage provided through Jest and Supertest.
 
+Swagger UI is also available for interactive API exploration and testing.
+
 ## Features
 
 - Add a new expense
@@ -24,6 +26,7 @@ The API is designed for local development and assessment workflows, with unit an
 - Input validation
 - Error handling
 - JSON file persistence
+- Swagger/OpenAPI documentation
 - Unit and integration tests
 
 ## Tech Stack
@@ -33,6 +36,8 @@ The API is designed for local development and assessment workflows, with unit an
 - UUID
 - Jest
 - Supertest
+- Swagger JSdoc
+- Swagger UI Express
 
 ## Project Structure
 
@@ -77,6 +82,16 @@ For development with automatic restarts:
 ```bash
 npm run dev
 ```
+
+## API Documentation
+
+After starting the server, open the interactive Swagger documentation at:
+
+```text
+http://localhost:3000/api-docs
+```
+
+The Swagger page provides live request and response details for the expense endpoints.
 
 ## Run Tests
 
@@ -207,7 +222,6 @@ The attached Postman screenshots in the submission demonstrate these behaviors a
 
 ## Future Improvements
 
-- Add Swagger or OpenAPI documentation
 - Add Docker support
 - Add search and pagination
 - Add monthly and yearly summaries
